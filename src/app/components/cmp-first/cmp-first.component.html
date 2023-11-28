@@ -1,6 +1,41 @@
-<p>cmp-first works!</p>
 
-<button routerLink="/second">boton</button>
-<div *ngIf="valor">
-    <h1>CONTENIDO FIRST</h1>
+
+<!-- encabezado -->
+<div class="calendar-header">
+  <div>
+    <h2 style="font-style: italic;">{{ getMonthName(currentMonth) }} {{ currentYear }}</h2>
+  </div>
+  <div>
+    <button class="nav-button" mat-raised-button (click)="prevMonth()">Anterior</button>
+    <button class="nav-button" mat-raised-button (click)="nextMonth()">Siguiente</button>
+  </div>
+</div>
+
+<!-- calendario -->
+<div class="calendar">
+  <!-- dias de la semana -->
+  <table class="table-days">
+    <thead>
+      <tr>
+        <th class="day-week" *ngFor="let day of daysOfWeek">{{ day }}</th>
+      </tr>
+    </thead>
+  </table>
+  <!-- grid -->
+  <div class="calendar-content">
+    <!-- contenido del calendario -->
+    <div *ngFor="let day of days" [ngClass]="{'day-month': true, 'current-month': day.belongsToCurrentMonth, 'other-month': !day.belongsToCurrentMonth}">
+      {{ day.day }}
+      <div *ngFor="let event of day.events">
+        <!-- eventos de cada dia -->
+        <div  class="day-event" >
+          {{ event.name }}
+        </div>
+        <!-- <div  class="day-event" >
+          {{ event.startTime }}, {{ event.durationHours === 999 ? 'Todo el día' : event.durationHours + ' horas' }}
+        </div> -->
+        <div style="margin-bottom: 10px;"></div>
+      </div>
+    </div>
+  </div>
 </div>
