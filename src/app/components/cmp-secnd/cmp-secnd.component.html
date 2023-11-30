@@ -1,7 +1,23 @@
-<p>cmp-secnd works!</p>
-<button routerLink="/first">boton</button>
-@if (valor) {
-<div>
-    <h1>CONTENIDO SECOND</h1>
+<header>
+    <nav class="navbar navbar-expand-lg justify-content-between">
+      <div class="header-container d-flex">
+        <a routerLink="/main"><img src="assets/img/logo.png" alt="logo" class="logo">AQUI LA EL LOGOTIPO</a>
+      </div>
+  
+      <div>
+        <button class="btn btn-primary mr-5" ><i class="bi bi-filetype-pdf"> manual</i></button>
+        <button class="btn btn-primary ml-2 text-end" >Cerrar sesión <i
+            class="bi bi-person-circle"></i></button>
+      </div>
+    </nav>
+    
+  </header>
+<div style="width: 80%; margin: 0 auto;">
+    <div style="padding-bottom: 100px;">
+        <h1>titulo 1 </h1>
+    </div>
+    <div class="custom-input-group" style="padding-bottom: 800px;">
+        <label for="fecha" class="custom-label">Aprobado por:</label>
+        <input type="text" id="fecha" class="custom-input" value="asdasdsdfjkliu" disabled/>
+    </div>
 </div>
-}

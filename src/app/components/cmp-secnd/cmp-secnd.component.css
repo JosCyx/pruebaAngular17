@@ -1,0 +1,49 @@
+header{
+    position: fixed;
+    width: 100%;
+    background-color: blueviolet;
+}
+
+.esto{
+    background-color: rgb(46, 18, 71);
+
+}
+
+/*SUSTITUYE AL ESTILO DEL INPUT-GROUP DE BOOSTRAP*/
+.custom-input-group {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    border-radius: 0.25rem;
+    overflow: hidden;
+}
+
+.custom-label {
+    padding: 0.375rem 0.75rem;
+    font-size: 1rem;
+    line-height: 1.5;
+    color: #495057;
+    background-color: #fff;
+    border-right: 1px solid #ced4da;
+    border-radius: 0.25rem 0 0 0.25rem;
+    flex-shrink: 0; 
+    white-space: nowrap; 
+}
+
+.custom-input {
+    flex-grow: 1;
+    width: 100%;
+    padding: 0.375rem 0.75rem;
+    font-size: 1rem;
+    line-height: 1.5;
+    color: #495057;
+    background-color: #fff;
+    border: none;
+    border-radius: 0 0.25rem 0.25rem 0;
+}
+
+.custom-input:focus,
+.custom-label:focus-within {
+    outline: 0;
+    border-color: #80bdff;
+}
